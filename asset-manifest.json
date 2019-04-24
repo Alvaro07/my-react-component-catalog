@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/my-react-component-catalog/static/css/main.666aa5ad.chunk.css",
+    "main.js": "/my-react-component-catalog/build/main.6950091c.js",
+    "runtime~main.js": "/my-react-component-catalog/build/bundle.feb19782.js",
+    "build/2.7e533d09.js": "/my-react-component-catalog/build/2.7e533d09.js",
+    "index.html": "/my-react-component-catalog/index.html",
+    "precache-manifest.0f3edc1f01e425eb7881afc0bf55b87d.js": "/my-react-component-catalog/precache-manifest.0f3edc1f01e425eb7881afc0bf55b87d.js",
+    "service-worker.js": "/my-react-component-catalog/service-worker.js",
+    "static/css/main.666aa5ad.chunk.css.map": "/my-react-component-catalog/static/css/main.666aa5ad.chunk.css.map"
+  }
+}
