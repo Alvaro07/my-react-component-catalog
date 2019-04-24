@@ -71,6 +71,11 @@ html {
   [class*="rsg--spacing-"] {
     margin: 0;
   }
+
+  // Markdown styles
+  [class*="rsg--para-"] {
+    font-size: 1.4rem;
+  }
 }
 
 [class*="rsg--footer-"] [class*="rsg--para-"] {

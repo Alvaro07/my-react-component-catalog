@@ -7,24 +7,33 @@
 .c-button {
   --bg-color: #{$blue};
   --bg-hover-color: #{$darkBlue};
+  --text-color: white;
 
   display: flex;
   align-items: center;
 
   border: none;
   padding: 10px 20px;
-  background-color: var(--bg-color);
   border-radius: 3px;
-  cursor: pointer;
-  transition: 0.2s all ease;
 
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
-  color: white;
+  color: var(--text-color);
 
-  &:hover {
-    background-color: var(--bg-hover-color);
+  &:not(:disabled) {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: 0.2s all ease;
+    &:hover {
+      background-color: var(--bg-hover-color);
+    }
+  }
+
+  // disabled
+  &:disabled {
+    --bg-color: #{$grey};
+    --text-color: #{$darkGrey};
   }
 
   // small button
@@ -34,13 +43,13 @@
   }
 
   // secondary
-  &--secondary {
+  &--secondary:not(:disabled) {
     --bg-color: #{$green};
     --bg-hover-color: #{$darkGreen};
   }
 
   // terciary
-  &--terciary {
+  &--terciary:not(:disabled) {
     --bg-color: #{$orange};
     --bg-hover-color: #{$darkOrange};
   }
