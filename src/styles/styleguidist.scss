@@ -1,0 +1,80 @@
+/*
+  Stylguidist reset styles
+*/
+
+@import "./settings/variables.scss";
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+[class*="rsg--body-"] {
+  // Separación de los bloques entre componentes
+  [class*="rsg--root-"] {
+    margin-bottom: 20px;
+  }
+
+  // bloqu ede docuemntación superior
+  [class*="rsg--docs-"] {
+    margin-bottom: 20px;
+    border-bottom: 4px solid $lightGrey;
+    .rsg--para-39 {
+      margin-bottom: 10px;
+    }
+  }
+
+  [class*="rsg--heading4-"] {
+    padding-top: 20px;
+    border-top: 4px solid $lightGrey;
+    font-weight: 500;
+  }
+
+  // Bloque de visualización del componente
+  [class*="rsg--preview-"] {
+    border: none;
+    padding: 20px 20px 40px 0;
+    & > div {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  // estilos de enlaces de props & view code
+  [class*="rsg--button-"] {
+    text-transform: none;
+    font-size: 14px;
+    padding: 0 0 5px 0;
+    margin-bottom: 15px;
+
+    [class*="rsg--isActive-"] {
+      border-bottom: 1px #e90 solid;
+      color: #e90;
+    }
+  }
+
+  // default props table
+  [class*="rsg--table-"],
+  [class*="rsg--tabs-"] {
+    margin-bottom: 0;
+  }
+
+  [class*="rsg--sidebar-"] {
+    // Enlaces del menu de navegación de cada componente
+    [class*="rsg--link-"],
+    [class*="rsg--link-"]:link,
+    [class*="rsg--link-"]:visited {
+      font-weight: 500;
+    }
+  }
+
+  [class*="rsg--spacing-"] {
+    margin: 0;
+  }
+}
+
+[class*="rsg--footer-"] [class*="rsg--para-"] {
+  display: none;
+}
+
+@import "./base/helpers.scss";
