@@ -10,6 +10,16 @@ html {
 }
 
 [class*="rsg--body-"] {
+  // cabecera
+  [class*="rsg--header-"] {
+    margin-bottom: 0;
+    
+    [class*="rsg--heading-"] {
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+  }
+
   // Separación de los bloques entre componentes
   [class*="rsg--root-"] {
     margin-bottom: 20px;
