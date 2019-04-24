@@ -33,7 +33,7 @@
   // disabled
   &:disabled {
     --bg-color: #{$grey};
-    --text-color: #{$darkGrey};
+    --text-color: #{rgba($darkGrey, 0.7)};
   }
 
   // small button

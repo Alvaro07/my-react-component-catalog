@@ -9,7 +9,7 @@
 
 #### Secondary Button
 
-Add 'secondary' to _variant_ propierty.
+Add **secondary** to _variant_ propierty.
 
 ```js
 <Button text="Secondary" variant="secondary" onClick={() => alert('Secondary button click')} />
@@ -19,7 +19,7 @@ Add 'secondary' to _variant_ propierty.
 
 #### Terciary Button
 
-Add 'terciary' to _variant_ propierty.
+Add **terciary** to _variant_ propierty.
 
 ```js
 
