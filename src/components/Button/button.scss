@@ -8,6 +8,9 @@
   --bg-color: #{$blue};
   --bg-hover-color: #{$darkBlue};
 
+  display: flex;
+  align-items: center;
+
   border: none;
   padding: 10px 20px;
   background-color: var(--bg-color);
@@ -42,4 +45,8 @@
     --bg-hover-color: #{$darkOrange};
   }
 
+  // icon
+  &__icon {
+    margin-right: 10px;
+  }
 }
