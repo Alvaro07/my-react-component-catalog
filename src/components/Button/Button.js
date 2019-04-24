@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../utils/fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Styles
 import "./button.scss";
 
 /**
  * Buttons allow users to take actions, and make choices, with a single tap. <br />
- * We have three types of component, primary, secondary and tertiary.
+ * We have three types of component, primary, secondary and terciary.
  * @version 1.0.0
  * @author [Álvaro González](https://github.com/Alvaro07)
  */
@@ -26,6 +28,7 @@ const Button = props => {
 
   return (
     <button className={`c-button ${props.extraClass} ${smallClass} ${variantClass}`} onClick={props.onClick}>
+      {props.icon && <FontAwesomeIcon icon={props.icon} className="c-button__icon" />}
       {props.text}
     </button>
   );
@@ -38,7 +41,8 @@ const Button = props => {
 Button.defaultProps = {
   extraClass: "",
   small: false,
-  variant: "primary"
+  variant: "primary",
+  icon: null
 };
 
 Button.propTypes = {
@@ -50,9 +54,9 @@ Button.propTypes = {
   small: PropTypes.bool,
   variant: PropTypes.oneOf(["primary", "secondary", "terciary"]),
   /** Function to execute an action */
-  onClick: PropTypes.func
-  // icon: PropTypes.string,
-  // submit: PropTypes.bool,
+  onClick: PropTypes.func,
+  /** The icon class */
+  icon: PropTypes.string
   // isLoading: PropTypes.bool
 };
 
