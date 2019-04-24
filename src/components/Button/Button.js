@@ -9,7 +9,7 @@ import "./button.scss";
 /**
  * Buttons allow users to take actions, and make choices, with a single tap. <br />
  * We have three types of component, primary, secondary and terciary.
- * @version 1.0.0
+ * @version 1.1.0
  * @author [Álvaro González](https://github.com/Alvaro07)
  */
 
@@ -27,7 +27,7 @@ const Button = props => {
   }
 
   return (
-    <button className={`c-button ${props.extraClass} ${smallClass} ${variantClass}`} onClick={props.onClick}>
+    <button className={`c-button ${props.extraClass} ${smallClass} ${variantClass}`} onClick={props.onClick} disabled={props.disabled}>
       {props.icon && <FontAwesomeIcon icon={props.icon} className="c-button__icon" />}
       {props.text}
     </button>
@@ -42,7 +42,8 @@ Button.defaultProps = {
   extraClass: "",
   small: false,
   variant: "primary",
-  icon: null
+  icon: null,
+  disabled: false
 };
 
 Button.propTypes = {
@@ -56,8 +57,9 @@ Button.propTypes = {
   /** Function to execute an action */
   onClick: PropTypes.func,
   /** The icon class */
-  icon: PropTypes.string
-  // isLoading: PropTypes.bool
+  icon: PropTypes.string,
+  /** Disabled the button */
+  disabled: PropTypes.bool
 };
 
 export default Button;
