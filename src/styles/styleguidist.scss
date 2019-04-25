@@ -4,28 +4,39 @@
 
 @import "./settings/variables.scss";
 
+/**
+  * Base styles
+  */
+
 html {
   font-size: 62.5%;
   height: 100%;
 }
 
 [class*="rsg--body-"] {
-  // cabecera
+  /**
+  * cabecera
+  */
+
   [class*="rsg--header-"] {
     margin-bottom: 0;
-    
+
     [class*="rsg--heading-"] {
       font-size: 3.2rem;
       font-weight: 700;
     }
   }
 
+  /**
+  * Componentes
+  */
+
   // Separación de los bloques entre componentes
   [class*="rsg--root-"] {
     margin-bottom: 20px;
   }
 
-  // bloqu ede docuemntación superior
+  // bloque de docuemntación superior
   [class*="rsg--docs-"] {
     margin-bottom: 20px;
     border-bottom: 4px solid $lightGrey;
@@ -63,11 +74,44 @@ html {
     }
   }
 
-  // default props table
-  [class*="rsg--table-"],
-  [class*="rsg--tabs-"] {
+  /**
+  * Default props table
+  */
+
+  [class*="rsg--table-"] {
     margin-bottom: 0;
   }
+  [class*="rsg--table-"] {
+    margin-bottom: 0;
+    margin-top: 10px;
+
+    thead tr {
+      
+      & > th {
+        font-size: 1.4rem;
+        padding-left: 15px;
+      }
+    }
+
+    tbody tr {
+      & > td {
+        padding-left: 15px;
+        font-size: 1.2rem;
+        vertical-align: middle;
+      }
+      &:nth-child(odd) {
+        background-color: $lightGrey;
+      }
+
+      [class*="rsg--para-"] {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /**
+  * Menu lateral
+  */
 
   [class*="rsg--sidebar-"] {
     // Enlaces del menu de navegación de cada componente
@@ -82,14 +126,25 @@ html {
     margin: 0;
   }
 
-  // Markdown styles
+  /**
+  * Markdown styles
+  */
+
   [class*="rsg--para-"] {
     font-size: 1.4rem;
   }
 }
 
+/**
+  * Footer
+  */
+
 [class*="rsg--footer-"] [class*="rsg--para-"] {
   display: none;
 }
+
+/**
+  * Helpers
+  */
 
 @import "./base/helpers.scss";
