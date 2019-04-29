@@ -34,6 +34,12 @@ html {
   // Separación de los bloques entre componentes
   [class*="rsg--root-"] {
     margin-bottom: 20px;
+
+    &:not(:first-child) [class*="rsg--header-"] {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 10px solid $lightGrey;
+    }
   }
 
   // bloque de docuemntación superior
@@ -86,7 +92,6 @@ html {
     margin-top: 10px;
 
     thead tr {
-      
       & > th {
         font-size: 1.4rem;
         padding-left: 15px;
